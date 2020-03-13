@@ -27,10 +27,10 @@
 
 ## 思路：
 **方法一：KMP算法**
-*  
+* 较难
 
 **方法二：Sunday算法**
-*
+* 较容易理解
 
 ## 代码
 **KMP算法**
@@ -103,7 +103,7 @@ class a28__Solution(object):
             if str_cut == p:
                 return idx
             else:
-                if idx+len_p >= len(s):
+                if idx+len_p == len(s):# 刚好idx==len(s)-len_p，没有下一个值的索引,s[idx+len_p]会报错
                     return -1
                 cur_c = s[idx+len_p]
                 idx += dic.get(cur_c, len_p+1)
