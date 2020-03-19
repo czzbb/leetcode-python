@@ -16,7 +16,7 @@
 * [前序遍历](https://github.com/czzbb/leetcode-python/blob/master/code/0144-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%89%8D%E5%BA%8F%E9%81%8D%E5%8E%86.md)
 * [后续遍历](https://github.com/czzbb/leetcode-python/blob/master/code/0145-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%90%8E%E7%BB%AD%E9%81%8D%E5%8E%86.md)
 
-**前序遍历和后续遍历可以看成是一种**
+**前序遍历和后续遍历可以看成是一种（后续遍历中有介绍）**
 
 ---
 ### 回溯问题
@@ -44,3 +44,20 @@ def backtrack(路径，选择列表):
     从选择列表中添加选择
     删除路径中的选择
 ```
+
+---
+### 二分查找
+二分查找思路虽然简单。。。但是细节真是要命。  
+这里用**统一的思维解决所有二分查找问题。**
+* 二分查找流程（三步骤）：
+  1. 先筛选特例：
+    例如：数组为空，或待查元素大于最大元素，导致下标溢出
+  2. 框架：
+      * 使用`while l<r`，这样while出来后一定是l=r
+      * `mid = (l+r)//2` 向下取整 或  `mid = (l+r+1)//2` 向上取整；具体根据情况，下面会介绍
+      * 利用**排除法**：  
+        本题**关键在于 `nums[mid]==target`时，mid是和小于还是和大于放在一起，我们需要排除右边还是左边（mid会保留）**，放在if中；这样else中是mid直接赋值，而不要对mid加/减1再赋值
+  3. 根据题目看是否需要对最终选出的元素进行判断。
+* 如果 else 下是l=mid，则要向上取整；否则可能会跳不出while  
+可以看看[34-在排序数组中查找元素的第一个和最后一个位置](https://github.com/czzbb/leetcode-python/blob/master/code/0034-%E5%9C%A8%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9F%A5%E6%89%BE%E5%85%83%E7%B4%A0%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%92%8C%E6%9C%80%E5%90%8E%E4%B8%80%E4%B8%AA%E4%BD%8D%E7%BD%AE.md)和
+[35-搜索插入的位置](https://github.com/czzbb/leetcode-python/blob/master/code/0035-%E6%90%9C%E7%B4%A2%E6%8F%92%E5%85%A5%E4%BD%8D%E7%BD%AE.md)加深理解
