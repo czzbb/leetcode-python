@@ -16,7 +16,7 @@
 * [前序遍历](https://github.com/czzbb/leetcode-python/blob/master/code/0144-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%89%8D%E5%BA%8F%E9%81%8D%E5%8E%86.md)
 * [后续遍历](https://github.com/czzbb/leetcode-python/blob/master/code/0145-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%90%8E%E7%BB%AD%E9%81%8D%E5%8E%86.md)
 
-**前序遍历和后续遍历可以看成是一种（后续遍历中有介绍）**
+*前序遍历和后续遍历可以看成是一种（后续遍历中有介绍）*
 
 ---
 ### 回溯问题
