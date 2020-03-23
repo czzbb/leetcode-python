@@ -9,6 +9,8 @@
 ## 做题总结
 ### 排序算法
 [十大经典排序算法](https://github.com/czzbb/leetcode-python/blob/master/code/0000-%E5%8D%81%E5%A4%A7%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95.md)
+
+---
 ### 股票问题
 一种简单的动态规划解决[股票6问](https://github.com/czzbb/leetcode-python/blob/master/code/0000-%E8%82%A1%E7%A5%A86%E9%97%AE%E6%B1%87%E6%80%BB.md)
 
