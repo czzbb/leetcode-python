@@ -62,5 +62,10 @@ def backtrack(路径，选择列表):
       * 利用**排除法**：***排除肯定不是解的部分，那么剩下就是解了***
   3. 根据题目看是否需要对最终选出的元素进行判断。
 * 如果 else 下是l=mid，则要向上取整；否则可能会跳不出while  
-可以看看[34-在排序数组中查找元素的第一个和最后一个位置](https://github.com/czzbb/leetcode-python/blob/master/code/0034-%E5%9C%A8%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9F%A5%E6%89%BE%E5%85%83%E7%B4%A0%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%92%8C%E6%9C%80%E5%90%8E%E4%B8%80%E4%B8%AA%E4%BD%8D%E7%BD%AE.md)和
+* 可以看看[34-在排序数组中查找元素的第一个和最后一个位置](https://github.com/czzbb/leetcode-python/blob/master/code/0034-%E5%9C%A8%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9F%A5%E6%89%BE%E5%85%83%E7%B4%A0%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%92%8C%E6%9C%80%E5%90%8E%E4%B8%80%E4%B8%AA%E4%BD%8D%E7%BD%AE.md)和
 [35-搜索插入的位置](https://github.com/czzbb/leetcode-python/blob/master/code/0035-%E6%90%9C%E7%B4%A2%E6%8F%92%E5%85%A5%E4%BD%8D%E7%BD%AE.md)加深理解
+* 此外，**旋转排序数组**的题目也可以练练，进一步熟悉下：
+[33-搜索旋转排序数组](https://github.com/czzbb/leetcode-python/blob/master/code/0033-%E6%90%9C%E7%B4%A2%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84.md), 
+[81-搜索旋转排序数组 II](https://github.com/czzbb/leetcode-python/blob/master/code/0081-%E6%90%9C%E7%B4%A2%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%20II.md), 
+[153-寻找旋转排序数组中的最小值](https://github.com/czzbb/leetcode-python/blob/master/code/0153-%E5%AF%BB%E6%89%BE%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%9C%80%E5%B0%8F%E5%80%BC.md), 
+[154-寻找旋转排序数组中的最小值 II](https://github.com/czzbb/leetcode-python/blob/master/code/0154-%E5%AF%BB%E6%89%BE%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%9C%80%E5%B0%8F%E5%80%BC%20II.md)
