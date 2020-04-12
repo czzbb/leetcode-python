@@ -24,7 +24,8 @@
 
 ---
 ### 回溯问题
-例：[46-全排列](https://github.com/czzbb/leetcode-python/blob/master/code/0046-%E5%85%A8%E6%8E%92%E5%88%97.md)  
+例：[46-全排列](https://github.com/czzbb/leetcode-python/blob/master/code/0046-%E5%85%A8%E6%8E%92%E5%88%97.md)，
+[22-括号生成](https://github.com/czzbb/leetcode-python/blob/master/code/0022-%E6%8B%AC%E5%8F%B7%E7%94%9F%E6%88%90.md)  
 解决一个回溯问题，实际上就是一个决策树的遍历过程。考虑三个问题
 1. **路径**：即已经做出的选择
 2. **选择列表**：即当前还可以做的选择
@@ -48,6 +49,7 @@ def backtrack(路径，选择列表):
     从选择列表中添加选择
     删除路径中的选择
 ```
+如果我们使用的**路径、选择**是相互独立的，就不用**撤销选择**，可见[22-括号生成](https://github.com/czzbb/leetcode-python/blob/master/code/0022-%E6%8B%AC%E5%8F%B7%E7%94%9F%E6%88%90.md)  
 
 ---
 ### 二分查找
