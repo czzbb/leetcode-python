@@ -12,7 +12,7 @@
 
 ---
 ### 股票问题
-一种简单的动态规划解决[股票6问](https://github.com/czzbb/leetcode-python/blob/master/code/0000-%E8%82%A1%E7%A5%A86%E9%97%AE%E6%B1%87%E6%80%BB.md)
+一种简单的**动态规划**解决[股票6问](https://github.com/czzbb/leetcode-python/blob/master/code/0000-%E8%82%A1%E7%A5%A86%E9%97%AE%E6%B1%87%E6%80%BB.md)
 
 ---
 ### 二叉树的非递归遍历
