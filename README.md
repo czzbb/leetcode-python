@@ -11,6 +11,12 @@
 [十大经典排序算法](https://github.com/czzbb/leetcode-python/blob/master/code/0000-%E5%8D%81%E5%A4%A7%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95.md)
 
 ---
+### 位运算
+[136. 只出现一次的数字](https://github.com/czzbb/leetcode-python/blob/master/code/0136-%E5%8F%AA%E5%87%BA%E7%8E%B0%E4%B8%80%E6%AC%A1%E7%9A%84%E6%95%B0%E5%AD%97.md)，
+[137. 只出现一次的数字 II](https://github.com/czzbb/leetcode-python/blob/master/code/0137-%E5%8F%AA%E5%87%BA%E7%8E%B0%E4%B8%80%E6%AC%A1%E7%9A%84%E6%95%B0%E5%AD%97%20II.md)，
+[260. 只出现一次的数字 III](https://github.com/czzbb/leetcode-python/blob/master/code/0260-%E5%8F%AA%E5%87%BA%E7%8E%B0%E4%B8%80%E6%AC%A1%E7%9A%84%E6%95%B0%E5%AD%97%20III.md)
+
+---
 ### 股票问题
 一种简单的**动态规划**解决[股票6问](https://github.com/czzbb/leetcode-python/blob/master/code/0000-%E8%82%A1%E7%A5%A86%E9%97%AE%E6%B1%87%E6%80%BB.md)
 
