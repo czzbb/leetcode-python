@@ -77,3 +77,16 @@ def backtrack(路径，选择列表):
 [81-搜索旋转排序数组 II](https://github.com/czzbb/leetcode-python/blob/master/code/0081-%E6%90%9C%E7%B4%A2%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%20II.md), 
 [153-寻找旋转排序数组中的最小值](https://github.com/czzbb/leetcode-python/blob/master/code/0153-%E5%AF%BB%E6%89%BE%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%9C%80%E5%B0%8F%E5%80%BC.md), 
 [154-寻找旋转排序数组中的最小值 II](https://github.com/czzbb/leetcode-python/blob/master/code/0154-%E5%AF%BB%E6%89%BE%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%9C%80%E5%B0%8F%E5%80%BC%20II.md)
+
+---
+### 并查集
+并查集经常用于：变量之间的**关系具有传递性**时  
+[并查集基本模板](https://github.com/czzbb/leetcode-python/blob/master/code/0000-%E5%B9%B6%E6%9F%A5%E9%9B%86%E5%9F%BA%E6%9C%AC%E6%A8%A1%E6%9D%BF.md)  
+**无权重并查集**
+[547. 省份数量](https://github.com/czzbb/leetcode-python/blob/master/code/0547-%E7%9C%81%E4%BB%BD%E6%95%B0%E9%87%8F.md), 
+[990. 等式方程的可满足性](https://github.com/czzbb/leetcode-python/blob/master/code/0990-%E7%AD%89%E5%BC%8F%E6%96%B9%E7%A8%8B%E7%9A%84%E5%8F%AF%E6%BB%A1%E8%B6%B3%E6%80%A7.md), 
+[785. 判断二分图](https://github.com/czzbb/leetcode-python/blob/master/code/0785-%E5%88%A4%E6%96%AD%E4%BA%8C%E5%88%86%E5%9B%BE.md), 
+[130. 被围绕的区域](https://github.com/czzbb/leetcode-python/blob/master/code/0130-%E8%A2%AB%E5%9B%B4%E7%BB%95%E7%9A%84%E5%8C%BA%E5%9F%9F.md)
+
+**带权重并查集**
+[399. 除法求值](https://github.com/czzbb/leetcode-python/blob/master/code/0399-%E9%99%A4%E6%B3%95%E6%B1%82%E5%80%BC.md)
