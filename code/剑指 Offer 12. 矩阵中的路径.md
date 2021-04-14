@@ -1,0 +1,56 @@
+# 剑指 Offer 12. 矩阵中的路径
+**难度:Medium**
+## 题目
+原文链接：https://leetcode-cn.com/problems/ju-zhen-zhong-de-lu-jing-lcof/
+
+给定一个 m x n 二维字符网格 board 和一个字符串单词 word 。如果 word 存在于网格中，返回 true ；否则，返回 false 。  
+单词必须按照字母顺序，通过相邻的单元格内的字母构成，其中“相邻”单元格是那些水平相邻或垂直相邻的单元格。同一个单元格内的字母不允许被重复使用。  
+例如，在下面的 3×4 的矩阵中包含单词 "ABCCED"（单词中的字母已标出）。
+
+**示例 1：**
+```
+输入：board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "ABCCED"
+输出：true
+```
+**示例 2：**
+```
+输入：board = [["a","b"],["c","d"]], word = "abcd"
+输出：false
+```
+
+## 思路
+* 矩阵搜索问题
+* 通常都可以用**DFS（递归）**或者**BFS（借助队列）** + **剪枝**（排除不符合条件的，已访问过的）
+* 这里用**DFS**，以及回溯的思想
+* 每个节点有四个方向，要避免重复访问，因此将访问过的点值改为`''`，退出时再赋值为原来的值
+
+## 代码
+```python
+class j12_Solution:
+    def exist(self, board: List[List[str]], word: str) -> bool:
+        def dfs(i, j, ind):
+            if ind == size:
+                return True
+            #
+            if not 0<=i<m or not 0<=j<n or board[i][j] != word[ind]:return False
+            # 递归要往下走了，回溯
+            flag = False
+            tmp = board[i][j]
+            board[i][j] = '' # 将当前的值变为''，这样避免的再走到
+            for di, dj in dirs:
+                ni, nj = i+di, j+dj
+                if dfs(ni, nj, ind+1):
+                    flag = True
+                    break
+            board[i][j] = tmp # 将当前值还原
+            return flag
+
+        dirs = [[0,1], [0, -1], [1, 0], [-1, 0]]
+        m, n  = len(board), len(board[0])
+        size = len(word)
+        for i in range(m):
+            for j in range(n):
+                if dfs(i, j, 0):
+                    return True
+        return False
+```
