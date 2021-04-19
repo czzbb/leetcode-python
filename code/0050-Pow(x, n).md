@@ -25,53 +25,42 @@
 ## 思路
 **方法一**
 * 二分法
+* `n` 小于`0`， 就 `x, n = 1 / x, -n`
 * 例如：`x**37`(奇数)，则可以通过计算 `x**18 * x**18 * x`来得到；
 * 而 `x**18`(偶数)，则可以通过计算 `x**9 * x**9` 来得到
 
 **方法二**
 * 利用位运算
-* 即使用了n次x，可以将n的二进制写出来
-* 例如n的二进制为：1001101，则最终使用了 `x**1 * x**4 * x**8 * x**64`
+* 即使用了`n`次`x`，可以将`n`的二进制写出来
+* 例如`n`的二进制为：`1001101`，则最终使用了 `x**1 * x**4 * x**8 * x**64`
 
 ## 代码
 **方法一**
 ```python
-class a50_Solution(object):
-    def myPow(self, x, n):
-        """
-        :type x: float
-        :type n: int
-        :rtype: float
-        """
-        def helper(n):
-            if n == 0 : return 1
-            y = helper(n>>1)
-            if n%2:
+class a50_Solution:
+    def myPow(self, x: float, n: int) -> float:
+        if n < 0:
+            n, x = -n, 1/x
+        def func(n):
+            if n == 0: return 1
+            y = func(n>>1)
+            if n&1:
                 return x*y*y
-            else:
-                return y*y
-        return helper(n) if n>0 else 1./helper(-n)
+            return y*y
+        return func(n)
 ```
 **方法二**
 ```python
 class a50__Solution(object):
-    def myPow(self, x, n):
-        """
-        :type x: float
-        :type n: int
-        :rtype: float
-        """
-        ans = 1
-        flag = 1# 标记正负
-        base = x
+    def myPow(self, x: float, n: int) -> float:
         if n < 0:
-            flag = 0
-            n = -n
-        #
+            x, n = 1 / x, -n
+        ans = 1
+        base = x
         while n:
-            if n%2:# 该二进制位是1
+            if n & 1:
                 ans *= base
-            base *=base
-            n>>=1
-        return ans if flag else 1./ans
+            n >>= 1
+            base *= base
+        return ans
 ```
