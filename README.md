@@ -59,9 +59,14 @@ def backtrack(路径，选择列表):
 
 #### 子集/组合/排列问题
 * 该类问题都可以抽象为**树的遍历**问题。
-* **子集&组**合问题是没有顺序的；排列问题是有顺序的。
-* 因此**子集&组合**的便利是不完全树，可以通过start（索引）来对树进行减枝，即我们通过保证元素之间的**相对顺序不变**来防止出现重复的子集&组合。如[78. 子集](https://leetcode.cn/problems/subsets/)，[77. 组合](https://leetcode.cn/problems/combinations/)。
-* **排列**问题通常通过一个集合(set)记录下访问过的元素，避免重复访问。如[46. 全排列](https://leetcode.cn/problems/permutations/)。**子集&组合**通过上述方法已经避免了重复访问。
+* **子集&组合**问题是没有顺序的；**排列**问题是有顺序的。
+* **无重复元素**问题
+  * 因此**子集&组合**的遍历是不完全树，可以通过start（索引）来对树进行减枝，即我们通过保证元素之间的**相对顺序不变**来防止出现重复的子集&组合。如[78. 子集](https://leetcode.cn/problems/subsets/)，[77. 组合](https://leetcode.cn/problems/combinations/)。
+  * **排列**问题通常通过一个集合(set)记录下访问过的元素，避免重复访问。如[46. 全排列](https://leetcode.cn/problems/permutations/)。**子集&组合**通过上述方法已经避免了重复访问。
+* **有重复元素**问题：
+  * 避免出现重复解：**避免同一层中，选择相同的值**
+  * **子集&组合**: 通过**对原始数组进行排序**；若**当前值与上一个值相同，则跳过（因为上一个值是必选的）**。从而避免了同一层选择相同的值。[90. 子集 II](https://leetcode.cn/problems/subsets-ii/)，[40. 组合总和 II](https://leetcode.cn/problems/combination-sum-ii/)。
+  * **排列**: 通过使用当前层一个集合(cur_set)来判断是否选择了重复值。[47. 全排列 II](https://leetcode.cn/problems/permutations-ii/)。
 ---
 ### 二分查找
 二分查找思路虽然简单。。。但是细节真是要命。  
