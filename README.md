@@ -57,6 +57,10 @@ def backtrack(路径，选择列表):
 ```
 如果我们使用的**路径、选择**是相互独立的，就不用**撤销选择**，可见[22-括号生成](https://github.com/czzbb/leetcode-python/blob/master/code/0022-%E6%8B%AC%E5%8F%B7%E7%94%9F%E6%88%90.md)  
 
+#### 子集/组合/排列问题
+* 子集&组合问题是没有顺序的；排列问题是有顺序的。
+* 因此子集&组合的便利是不完全树，可以通过start（索引）来对树进行减枝，即我们通过保证元素之间的**相对顺序不变**来防止出现重复的子集&组合。如[78. 子集](https://leetcode.cn/problems/subsets/)，[77. 组合](https://leetcode.cn/problems/combinations/)。
+
 ---
 ### 二分查找
 二分查找思路虽然简单。。。但是细节真是要命。  
