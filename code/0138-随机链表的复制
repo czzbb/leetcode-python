@@ -1,0 +1,33 @@
+```python
+class Solution:
+    # 之间空间复杂度都是O(n)，因为用到了哈希表
+    # 哈希表的用途主要是找到random节点的位置
+    # 如果对每个节点之后都复制一个节点，即
+    # 原本：o1->o2->... 变成 :o1->n1->o2->n2....
+    # 这样就可以找到random节点的位置，不需要额外的空间
+    def copyRandomList(self, head: 'Node') -> 'Node':
+        if not head:return
+        # 插入新的节点
+        cur = head
+        while cur:
+            new = Node(cur.val)
+            new.next = cur.next
+            cur.next = new
+            cur = cur.next.next
+        # 处理新节点的 random。因为问题的关键就是找random节点，因此先处理random，再处理next
+        cur = head
+        while cur:
+            new = cur.next
+            new.random = cur.random.next if cur.random else None
+            cur = cur.next.next
+        # 处理next，并拆分
+        cur = head
+        top = head.next
+        while cur:
+            new = cur.next
+            cur.next = cur.next.next
+            new.next = new.next.next if new.next else new.next
+            cur = cur.next
+        return top
+
+```
